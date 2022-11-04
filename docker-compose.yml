@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  apache-beam:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      - ENV_APACHE_BEAM=${APACHE_BEAM}
+    tty: true
+    volumes:
+      - ./:/opt/app/apache_beam
